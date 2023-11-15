@@ -9,11 +9,22 @@ import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 import javax.swing.JRootPane;
 import javax.swing.JTextField;
+import controller.ControllerCadastrarCliente;
+
 
 public class GerenteCadastrar extends javax.swing.JFrame {
 
     public GerenteCadastrar() {
         initComponents();
+        controller = new ControllerCadastrarCliente(this);
+    }
+
+    public ControllerCadastrarCliente getController() {
+        return controller;
+    }
+
+    public void setController(ControllerCadastrarCliente controller) {
+        this.controller = controller;
     }
 
     public JMenuBar getDecoracaob() {
@@ -452,9 +463,11 @@ public class GerenteCadastrar extends javax.swing.JFrame {
     }//GEN-LAST:event_bt_cancelar_criarActionPerformed
 
     private void bt_criar_cadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_criar_cadastrarActionPerformed
-
+        controller.salvarCliente();
     }//GEN-LAST:event_bt_criar_cadastrarActionPerformed
 
+
+    private ControllerCadastrarCliente controller;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuBar Decoracaob;
     private javax.swing.JButton bt_cancelar_criar;

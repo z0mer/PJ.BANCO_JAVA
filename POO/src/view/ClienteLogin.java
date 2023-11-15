@@ -4,6 +4,7 @@ public class ClienteLogin extends javax.swing.JFrame {
 
     public ClienteLogin() {
         initComponents();
+        controller = new ControllerLoginCliente(this);
     }
 
     @SuppressWarnings("unchecked")
@@ -158,7 +159,7 @@ public class ClienteLogin extends javax.swing.JFrame {
     }//GEN-LAST:event_CpftxtActionPerformed
 
     private void EntrarbtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EntrarbtActionPerformed
-        // TODO add your handling code here:
+        controller.loginCliente();
     }//GEN-LAST:event_EntrarbtActionPerformed
 
     private void SenhapssActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SenhapssActionPerformed
