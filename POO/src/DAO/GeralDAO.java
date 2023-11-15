@@ -1,53 +1,17 @@
 package DAO;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import model.Cliente;
 import model.Gerente;
-import model.Pessoa;
 
 public class GeralDAO {
     private Connection conn;
 
     public GeralDAO(Connection conn) {
         this.conn = conn;
-    }
-
-    
-    public void inserirPessoa(Pessoa pessoa) throws SQLException {
-        String sql = "INSERT INTO pessoa (nome, cpf) VALUES (?, ?)";
-        try (PreparedStatement statement = conn.prepareStatement(sql)) {
-            statement.setString(1, pessoa.getNome());
-            statement.setString(2, pessoa.getCpf());
-            statement.execute();
-        }
-    }
-
-    public ResultSet consultarPessoa(Pessoa pessoa) throws SQLException {
-        String sql = "SELECT * FROM pessoa WHERE cpf = ?";
-        try (PreparedStatement statement = conn.prepareStatement(sql)) {
-            statement.setString(1, pessoa.getCpf());
-            statement.execute();
-            return statement.getResultSet();
-        }
-    }
-
-    public void atualizarPessoa(Pessoa pessoa) throws SQLException {
-        String sql = "UPDATE pessoa SET nome = ? WHERE cpf = ?";
-        try (PreparedStatement statement = conn.prepareStatement(sql)) {
-            statement.setString(1, pessoa.getNome());
-            statement.setString(2, pessoa.getCpf());
-            statement.execute();
-        }
-    }
-
-    public void removerPessoa(Pessoa pessoa) throws SQLException {
-        String sql = "DELETE FROM pessoa WHERE cpf = ?";
-        try (PreparedStatement statement = conn.prepareStatement(sql)) {
-            statement.setString(1, pessoa.getCpf());
-            statement.execute();
-        }
     }
 
     public void inserirCliente(Cliente cliente) throws SQLException {
@@ -108,7 +72,7 @@ public class GeralDAO {
     }
 
     public void atualizarGerente(Gerente gerente) throws SQLException {
-
+        
     }
 
     public void removerGerente(Gerente gerente) throws SQLException {
