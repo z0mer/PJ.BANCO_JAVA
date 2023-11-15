@@ -22,6 +22,7 @@ public class GeralDAO {
             statement.setDouble(3, cliente.getValor());
             statement.setString(4, cliente.getTipoConta());
             statement.execute();
+            conn.close();
         }
     }
 
@@ -32,6 +33,7 @@ public class GeralDAO {
             statement.setString(2, cliente.getSenha());
             statement.execute();
             return statement.getResultSet();
+            return resultado;
         }
     }
 
@@ -43,6 +45,7 @@ public class GeralDAO {
             statement.setString(3, cliente.getTipoConta());
             statement.setString(4, cliente.getCpf());
             statement.execute();
+            conn.close();
         }
     }
 
@@ -51,6 +54,7 @@ public class GeralDAO {
         try (PreparedStatement statement = conn.prepareStatement(sql)) {
             statement.setString(1, cliente.getCpf());
             statement.execute();
+            conn.close();
         }
     }
 
@@ -59,6 +63,7 @@ public class GeralDAO {
         try (PreparedStatement statement = conn.prepareStatement(sql)) {
             statement.setString(1, gerente.getCpf());
             statement.execute();
+            conn.close();
         }
     }
 
@@ -68,6 +73,7 @@ public class GeralDAO {
             statement.setString(1, gerente.getCpf());
             statement.execute();
             return statement.getResultSet();
+            return resultado;
         }
     }
 
@@ -80,6 +86,7 @@ public class GeralDAO {
         try (PreparedStatement statement = conn.prepareStatement(sql)) {
             statement.setString(1, gerente.getCpf());
             statement.execute();
+            conn.close();
         }
     }
 }
