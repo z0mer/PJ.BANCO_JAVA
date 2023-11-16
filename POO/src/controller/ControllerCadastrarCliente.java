@@ -1,3 +1,4 @@
+package controller;
 import DAO.GeralDAO;
 import DAO.Conexao;
 import java.sql.Connection;
@@ -24,11 +25,15 @@ public class ControllerCadastrarCliente {
         try {
             Connection conn = conexao.getConnection();
             GeralDAO dao = new GeralDAO(conn);
-            dao.inserir(aluno);
+            dao.inserir(gerente);
             JOptionPane.showMessageDialog(view, "Cliente Cadastrado!","Aviso", JOptionPane.INFORMATION_MESSAGE);
         } catch (SQLException ex) {
             JOptionPane.showMessageDialog(view, "Falha na conexão!","Erro", JOptionPane.ERROR_MESSAGE);
             ex.printStackTrace();
         }
+    }
+
+    public void loginCliente() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }
