@@ -33,7 +33,6 @@ public class GeralDAO {
             statement.setString(2, cliente.getSenha());
             statement.execute();
             return statement.getResultSet();
-            return resultado;
         }
     }
 
@@ -73,7 +72,6 @@ public class GeralDAO {
             statement.setString(1, gerente.getCpf());
             statement.execute();
             return statement.getResultSet();
-            return resultado;
         }
     }
 
@@ -99,5 +97,13 @@ public class GeralDAO {
             statement.setString(4, cliente.getTipoConta());
             statement.execute();
         }
+    }
+
+    public ResultSet consultar(Cliente cliente) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    public void inserir(Gerente gerente) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }
