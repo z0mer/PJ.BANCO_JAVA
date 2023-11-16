@@ -1,4 +1,9 @@
 package view;
+import controller.ControllerLoginCliente;
+import model.Cliente;
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import javax.accessibility.AccessibleContext;
 
 public class ClienteLogin extends javax.swing.JFrame {
 
@@ -6,9 +11,133 @@ public class ClienteLogin extends javax.swing.JFrame {
         initComponents();
         controller = new ControllerLoginCliente(this);
     }
+    
+    public ControllerLoginCliente getController() {
+        return controller;
+    }
+
+    public void setController(ControllerLoginCliente controller) {
+        this.controller = controller;
+    }
+
+    public JLabel getBancolb() {
+        return Bancolb;
+    }
+
+    public void setBancolb(JLabel Bancolb) {
+        this.Bancolb = Bancolb;
+    }
+
+    public JLabel getCpflb() {
+        return Cpflb;
+    }
+
+    public void setCpflb(JLabel Cpflb) {
+        this.Cpflb = Cpflb;
+    }
+
+    public JLabel getCpflb1() {
+        return Cpflb1;
+    }
+
+    public void setCpflb1(JLabel Cpflb1) {
+        this.Cpflb1 = Cpflb1;
+    }
+
+    public JTextField getCpftxt() {
+        return Cpftxt;
+    }
+
+    public void setCpftxt(JTextField Cpftxt) {
+        this.Cpftxt = Cpftxt;
+    }
+
+    public JMenuBar getDecoracaob() {
+        return Decoracaob;
+    }
+
+    public void setDecoracaob(JMenuBar Decoracaob) {
+        this.Decoracaob = Decoracaob;
+    }
+
+    public JToggleButton getEntrarbt() {
+        return Entrarbt;
+    }
+
+    public void setEntrarbt(JToggleButton Entrarbt) {
+        this.Entrarbt = Entrarbt;
+    }
+
+    public JLabel getLogolb() {
+        return Logolb;
+    }
+
+    public void setLogolb(JLabel Logolb) {
+        this.Logolb = Logolb;
+    }
+
+    public JPasswordField getSenhapss() {
+        return Senhapss;
+    }
+
+    public void setSenhapss(JPasswordField Senhapss) {
+        this.Senhapss = Senhapss;
+    }
+
+    public JToggleButton getVoltarbt() {
+        return Voltarbt;
+    }
+
+    public void setVoltarbt(JToggleButton Voltarbt) {
+        this.Voltarbt = Voltarbt;
+    }
+
+    public JMenu getjMenu2() {
+        return jMenu2;
+    }
+
+    public void setjMenu2(JMenu jMenu2) {
+        this.jMenu2 = jMenu2;
+    }
+
+    public JPanel getjPanel1() {
+        return jPanel1;
+    }
+
+    public void setjPanel1(JPanel jPanel1) {
+        this.jPanel1 = jPanel1;
+    }
+
+    public JRootPane getRootPane() {
+        return rootPane;
+    }
+
+    public void setRootPane(JRootPane rootPane) {
+        this.rootPane = rootPane;
+    }
+
+    public boolean isRootPaneCheckingEnabled() {
+        return rootPaneCheckingEnabled;
+    }
+
+    public void setRootPaneCheckingEnabled(boolean rootPaneCheckingEnabled) {
+        this.rootPaneCheckingEnabled = rootPaneCheckingEnabled;
+    }
+
+    public AccessibleContext getAccessibleContext() {
+        return accessibleContext;
+    }
+
+    public void setAccessibleContext(AccessibleContext accessibleContext) {
+        this.accessibleContext = accessibleContext;
+    }
+    
+    public ClienteLogin(Cliente cliente) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
@@ -152,61 +281,27 @@ public class ClienteLogin extends javax.swing.JFrame {
         );
 
         pack();
-    }// </editor-fold>//GEN-END:initComponents
+    }// </editor-fold>                        
 
-    private void CpftxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CpftxtActionPerformed
+    private void CpftxtActionPerformed(java.awt.event.ActionEvent evt) {                                       
         // TODO add your handling code here:
-    }//GEN-LAST:event_CpftxtActionPerformed
+    }                                      
 
-    private void EntrarbtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EntrarbtActionPerformed
+    private void EntrarbtActionPerformed(java.awt.event.ActionEvent evt) {                                         
         controller.loginCliente();
-    }//GEN-LAST:event_EntrarbtActionPerformed
+    }                                        
 
-    private void SenhapssActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SenhapssActionPerformed
+    private void SenhapssActionPerformed(java.awt.event.ActionEvent evt) {                                         
         // TODO add your handling code here:
-    }//GEN-LAST:event_SenhapssActionPerformed
+    }                                        
 
-    private void VoltarbtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_VoltarbtActionPerformed
+    private void VoltarbtActionPerformed(java.awt.event.ActionEvent evt) {                                         
         this.dispose();
-    }//GEN-LAST:event_VoltarbtActionPerformed
+    }                                        
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(ClienteLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(ClienteLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(ClienteLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(ClienteLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new ClienteLogin().setVisible(true);
-            }
-        });
-    }
-
-    // Variables declaration - do not modify//GEN-BEGIN:variables
+    
+    private ControllerLoginCliente controller;
+    // Variables declaration - do not modify                     
     private javax.swing.JLabel Bancolb;
     private javax.swing.JLabel Cpflb;
     private javax.swing.JLabel Cpflb1;
@@ -218,5 +313,13 @@ public class ClienteLogin extends javax.swing.JFrame {
     private javax.swing.JToggleButton Voltarbt;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JPanel jPanel1;
-    // End of variables declaration//GEN-END:variables
+    // End of variables declaration                   
+
+    public Object getLb_senha_cliente() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    public Object getLb_cpf_cliente() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }
