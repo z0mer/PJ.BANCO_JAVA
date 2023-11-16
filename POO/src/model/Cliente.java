@@ -12,6 +12,13 @@ public class Cliente extends Pessoa {
         this.tipoConta = tipoConta;
     }
 
+    /*public Cliente(Object object, String text, String text0) {
+    throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+    
+    public Cliente(String nome, String cpf, String senha, String valor, String conta) {
+    throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }*/
     public String getSenha() {
         return senha;
     }
@@ -34,5 +41,9 @@ public class Cliente extends Pessoa {
 
     public void setTipoConta(String tipoConta) {
         this.tipoConta = tipoConta;
+    }
+
+    public double getLimite() {
+        return 1000.0; 
     }
 }
