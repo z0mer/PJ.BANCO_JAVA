@@ -1,5 +1,4 @@
 package controller;
-
 import DAO.GeralDAO;
 import DAO.Conexao;
 import java.sql.Connection;
@@ -9,16 +8,22 @@ import javax.swing.JOptionPane;
 import model.Cliente;
 import view.GerenteCadastrar;
 import view.ClienteLogin;
+import view.ClienteDebito;
+import view.ClienteDeposito;
+import view.ClienteExtrato;
+import view.ClienteMenu;
+import view.ClienteSaldo;
 
 public class ControllerLoginCliente {
-    private ClienteLogin;
+    private ClienteLogin view;
     
     public ControllerLoginCliente(ClienteLogin view){
         this.view = view;
     }
     
      public void loginCliente(){
-        Cliente cliente = new Cliente(null,view.getLb_cpf_cliente().getText(),view.getLb_senha_cliente().getText());
+        Cliente cliente;
+        cliente = new Cliente(null,view.getCpflb().getText(),view.getSenhapss().getText());
         Conexao conexao = new Conexao();
         try{
             Connection conn = conexao.getConnection();
